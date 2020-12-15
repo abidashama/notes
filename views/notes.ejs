@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Notes</h1>
+
+    
+        <% results.forEach(result => { %>
+        <form action="/notes/<%=result.id%>" method="POST"></form>
+            <div><input type="text" value="<%= result.title %>" ></div>
+            <div><input type="text" value="<%= result.note %>" ></div>
+            <div><input type="submit" value="Save"></div>
+        <% }) %>
+        
+    </form>
+
+</body>
+</html>
