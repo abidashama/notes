@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note with Postgres</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <center><h1>Index</h1></center>
+
+    <div class="container">
+
+        <form action="/index" method="POST">
+            <div><input type="text" id="title" name="title" placeholder="Title here" required></div>
+            <div><input type="text" id="note" placeholder="Take a note..." required></div>
+            <div><input type="submit" value="Add note"></div>
+        </form>
+
+        <ul id="list">
+            <% results.forEach(result => { %>
+                <li><%= result.title %>  <a href=" "><i class="fa fa-trash"></i></a> <a href=" "><i class="fa fa-edit"></i></a> </li>
+            <% }) %>
+        </ul>
+        
+    </div>
+
+</body>
+
+</html>
